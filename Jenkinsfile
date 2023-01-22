@@ -34,7 +34,7 @@ pipeline {
            steps {
               script {
                 sh '''
-                    cur ${HOST_IP}:${HOST_PORT} -I  | grep -i 302
+                    curl ${HOST_IP}:${HOST_PORT} -I  | grep -i 302
                    '''
               }
            }
@@ -44,7 +44,7 @@ pipeline {
           steps {
              script {
                sh '''
-                   docker stop $IMAGE_NAME
+                   docker stop $IMAGE_NAM
                    docker rm $IMAGE_NAME
                '''
              }
