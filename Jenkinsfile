@@ -5,8 +5,7 @@ pipeline {
         DOCKERHUB_ID = "royem001"
         DOCKERHUB_PASSWORD = credentials('dockerhub_password')
         HOST_IP = "${HOST_IP_PARAM}"
-        HOST_PORT = "${HOST_PORT_PARAM}"
-        
+        HOST_PORT = "${HOST_PORT_PARAM}" 
     }
     agent none
     stages {
