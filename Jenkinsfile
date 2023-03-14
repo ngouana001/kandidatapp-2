@@ -5,12 +5,11 @@ pipeline {
         DOCKERHUB_ID = "royem001"
         DOCKERHUB_PASSWORD = credentials('dockerhub_password')
         HOST_IP = "${HOST_IP_PARAM}"
-        HOST_PORT = "${HOST_PORT_PARAM}" 
-        
+        HOST_PORT = "${HOST_PORT_PARAM}"  
     }
     agent none
     stages {
-       stage('Build image') {
+       stage('Build Image') {
            agent any
            steps {
               script {
@@ -18,7 +17,7 @@ pipeline {
               }
            }
        }
-       stage('Run container') {
+       stage('Run Container') {
           agent any
           steps {
             script {
@@ -30,7 +29,7 @@ pipeline {
              }
           }
        }
-       stage('Test image') {
+       stage('Test Image') {
            agent any
            steps {
               script {
@@ -40,7 +39,7 @@ pipeline {
               }
            }
        }
-       stage('Clean container') {
+       stage('Clean Container') {
           agent any
           steps {
              script {
