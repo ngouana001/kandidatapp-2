@@ -50,7 +50,8 @@ pipeline {
              }
           }
       }
-
+        
+        
       stage ('Anmeldung und Push-Image auf Docker-Hub') {
           agent any
           steps {
