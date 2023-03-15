@@ -1,5 +1,4 @@
 pipeline {
-    
     environment {
         IMAGE_NAME = "kandidatapp-2"
         IMAGE_TAG = "latest"
